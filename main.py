@@ -91,7 +91,7 @@ def main():
 
     RATIO = [B[i] / H[i] for i in range(tests)]
 
-    print("Brutforce to heuristic average ratio: ", sum(RATIO) / len(RATIO))
+    print("Bruteforce to heuristic average ratio: ", sum(RATIO) / len(RATIO))
 
     # GRAPH
     plt.plot(OX, B, label="bruteforce")
