@@ -52,10 +52,10 @@ def heuristic(n, m, J, M):
         else:
             p = s
 
-    print("\nheura:")
-    print("jobs of lengths")
-    print([job for block in J for job in block])
-    print("get assigned to machines ==>")
-    print(_mask)
-    print(q)
+    # print("\nheura:")
+    # print("jobs of lengths")
+    # print([job for block in J for job in block])
+    # print("get assigned to machines ==>")
+    # print(_mask)
+    # print(q)
     return q

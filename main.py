@@ -61,26 +61,21 @@ def test(n, m, J, M):
 
 
 def main():
-    # print("ENTER: maximum number of jobs(int)")
-    # n = int(input())
-    #
-    # print("ENTER: maximum number of machines(int)")
-    # m = int(input())
-    #
-    # print("ENTER: maximum job size(float)")
-    # Jmax = float(input())
-    #
-    # print("ENTER: maximum machine speed(float)")
-    # Smax = float(input())
-    #
-    # print("ENTER: number of tests(int)")
-    # tests = int(input())
+    print("ENTER: maximum number of jobs(int)")
+    n = int(input())
 
-    n = 10
-    m = 4
-    Jmax = 10
-    Smax = 4
-    tests = 50
+    print("ENTER: maximum number of machines(int)")
+    m = int(input())
+
+    print("ENTER: maximum job size(float)")
+    Jmax = float(input())
+
+    print("ENTER: maximum machine speed(float)")
+    Smax = float(input())
+
+    print("ENTER: number of tests(int)")
+    tests = int(input())
+
 
     B = []
     H = []

@@ -54,10 +54,10 @@ def brutforce(n, m, J, M):
             best = cmax(n, m, J_flat, M, mask)
             best_assign = mask.copy()
 
-    print("\nbrut:")
-    print("jobs of lengths")
-    print(J_flat)
-    print("get assigned to machines ==>")
-    print(best_assign)
-    print(best)
+    # print("\nbrut:")
+    # print("jobs of lengths")
+    # print(J_flat)
+    # print("get assigned to machines ==>")
+    # print(best_assign)
+    # print(best)
     return best
