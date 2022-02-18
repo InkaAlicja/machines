@@ -4,11 +4,7 @@ def cmax(n, m, J, M, mask):
     for i in range(n):
         t[mask[i]] += J[i] / M[mask[i]]
 
-    res = t[0]
-    for sum in t:
-        res = max(res, sum)
-
-    return res
+    return max(t)
 
 
 # add one to a number of length n in the positional numerical system with base m,

@@ -18,7 +18,7 @@ def generate(n, m, Jmax, Smax, blocks=None):
     n_ = random.randint(MIN_JOBS, n)
     m_ = random.randint(MIN_MACHINES, m)
 
-    if blocks == None:
+    if blocks is None:
         blocks = random.randint(MIN_BLOCKS, n_)
 
     J = []  # set of blocks of jobs
@@ -77,7 +77,6 @@ def main():
 
     print("ENTER: number of tests(int)")
     tests = int(input())
-
 
     B = []
     H = []
