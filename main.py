@@ -94,9 +94,9 @@ def main():
     print("Brutforce to heuristic average ratio: ", sum(RATIO) / len(RATIO))
 
     # GRAPH
-    plt.plot(OX, B, label="brutforce")
+    plt.plot(OX, B, label="bruteforce")
     plt.plot(OX, H, label="heuristic")
-    plt.title("Q|cliques|C_max brutforce to heuristic comparison")
+    plt.title("Q|cliques|C_max bruteforce to heuristic comparison")
     plt.xlabel("test")
     plt.ylabel("C_max")
     plt.legend()
