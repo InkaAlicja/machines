@@ -3,7 +3,7 @@
 import random
 import matplotlib.pyplot as plt
 
-from brutforce import brutforce
+from bruteforce import bruteforce
 from heuristic import heuristic
 
 MIN_SPEED = 0.1
@@ -13,6 +13,7 @@ MIN_MACHINES = 1
 MIN_BLOCKS = 1
 
 
+# generate test
 def generate(n, m, Jmax, Smax, blocks=None):
     n_ = random.randint(MIN_JOBS, n)
     m_ = random.randint(MIN_MACHINES, m)
@@ -24,10 +25,10 @@ def generate(n, m, Jmax, Smax, blocks=None):
     M = []  # set of machine speeds
 
     count = n_
-    # generate job blocks
+    # generate job blocks(cliques)
     for i in range(blocks):
-        jobs_in_block = random.randint(1, min(count - blocks + i + 1,
-                                              m_))  # each block consists of at least one job but no more than the num of machines
+        jobs_in_block = random.randint(1, min(count - blocks + i + 1, m_))  # each block consists of at least one job
+                                                                            # but no more than the num of machines
         count -= jobs_in_block
         B = []
         for j in range(jobs_in_block):
@@ -36,6 +37,7 @@ def generate(n, m, Jmax, Smax, blocks=None):
 
         J.append(B)
 
+    # not the best solution but works
     n_ -= count
 
     # generate machine speeds
@@ -47,14 +49,14 @@ def generate(n, m, Jmax, Smax, blocks=None):
 
 
 def test(n, m, J, M):
-    print()
-    print(n)
-    print(m)
-    print(J)
-    print(M)
-    print()
+    # print()
+    # print(n)
+    # print(m)
+    # print(J)
+    # print(M)
+    # print()
 
-    b = brutforce(n, m, J, M)
+    b = bruteforce(n, m, J, M)
     h = heuristic(n, m, J, M)
 
     return b, h

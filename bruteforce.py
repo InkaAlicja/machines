@@ -12,7 +12,7 @@ def cmax(n, m, J, M, mask):
 
 
 # add one to a number of length n in the positional numerical system with base m,
-# where <mask> is the numbers representation in that system
+# where <mask> is the number's representation in that system
 def add_one(n, m, mask):
     i = 0
     while i < n:
@@ -31,7 +31,7 @@ def feasible(mask, J, m):
     job_it = 0
     for b in J:
         used = [False] * m
-        for job in b:
+        for _ in b:
             if used[mask[job_it]]:
                 return False
             else:
@@ -41,7 +41,7 @@ def feasible(mask, J, m):
     return True
 
 
-def brutforce(n, m, J, M):
+def bruteforce(n, m, J, M):
     J_flat = [job for block in J for job in block]
     mask = [0] * n
 

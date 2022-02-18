@@ -1,7 +1,7 @@
 ACCURACY = 0.05
 
-
-def pos_of_max(space, job, used):
+#find the least occupied machine(with the most free space)
+def machine(space, job, used):
     index = -1
 
     for i in range(len(space)):
@@ -35,7 +35,7 @@ def heuristic(n, m, J, M):
 
             for job in b:
                 # find the least occupied machine(with the most free space)
-                index = pos_of_max(space, job, used)
+                index = machine(space, job, used)
                 # if the job cannot be assigned to any machine there is no feasible schedule with makespan <= s
                 if index == -1:
                     feasible = False
